@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item lines="full">
+    <ion-title>Registro</ion-title>
+  </ion-item>
+  <br>
+  <ion-content>
+    <ion-item line="full">
+      <ion-input [(ngModel)]="nombre" placeholder="John" minlength="4" maxlength="15">
+        Nombre:
+      </ion-input>    
+    </ion-item>
+    <ion-item line="full">
+      <ion-input [(ngModel)]="apellido" placeholder="Doe" minlength="4" maxlength="15">
+        Apellido:
+      </ion-input>    
+    </ion-item>
+    <ion-item line="full">
+      <ion-input [(ngModel)]="correo" placeholder="ejemplo@gmail.com">
+        Correo Electronico:
+      </ion-input>    
+    </ion-item>
+    <ion-item line="full">
+      <ion-input type="password" [(ngModel)]="contrasena" placeholder="contraseña" minlength="4" maxlength="15">
+        Contraseña:
+      </ion-input>    
+    </ion-item>
+    <ion-item line="full">
+      <ion-input type="password" [(ngModel)]="confirContrasena" placeholder="contraseña" minlength="4" maxlength="15">
+        Confirmar contraseña:
+      </ion-input>    
+    </ion-item>
+
+    <ion-col>
+      <ion-button type="submit" (click)="register()" expand="block">Registrar e ingresar</ion-button>
+    </ion-col>
+
+  </ion-content>
+</ion-content>

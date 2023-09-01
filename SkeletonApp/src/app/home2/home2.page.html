@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>SkeletonApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio de app</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item lines="full">
+    <ion-label>Bienvenido {{nombre}}</ion-label>
+  </ion-item>
+  <br>
+  <ion-title>Bienvenido</ion-title>
+  <br>
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-input [(ngModel)]="texto1" placeholder="John">Nombre:</ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-input [(ngModel)]="texto2" placeholder="Doe">Apellido:</ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-item lines="full">
+    {{'Nivel Educacional'}}
+    <ion-select [(ngModel)]="campoSeleccionado">
+      <ion-select-option value="1">Basico</ion-select-option>
+      <ion-select-option value="2">Media</ion-select-option>
+      <ion-select-option value="3">Superior</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item lines="full">
+    <mat-form-field class="example-full-width">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </ion-item>
+  <ion-item lines="full">
+    
+    <ion-button (click)="limpiar()" >Limpiar</ion-button>
+
+    <ion-button color="danger" (click)="mostrar()" >Mostrar</ion-button>
+   </ion-item>
+ 
+ 
+  
+</ion-content>
+
+
