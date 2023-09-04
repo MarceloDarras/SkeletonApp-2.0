@@ -65,28 +65,12 @@ export class Home2Page implements OnInit {
     this.animationB.play();
   }
 
-  stop(){
-    this.animation.stop();
-    this.animationB.stop();
-  }
-
-  async limpiar(){
-    if(this.campoSeleccionado != "" || this.texto1 != '' || this.texto2 != ''){
-      this.play();
-      this.play2();
-      this.campoSeleccionado = '';
-      this.texto1= '';
-      this.texto2= '';
-    }else{
-      this.stop();
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'No se han ingresado valores para limpiar',
-        buttons: ['OK']
-      })
-      await alert.present();
-    }
-    
+  limpiar(){
+    this.play();
+    this.play2();
+    this.campoSeleccionado = '';
+    this.texto1= '';
+    this.texto2= '';
   }
 
   async mostrar(){

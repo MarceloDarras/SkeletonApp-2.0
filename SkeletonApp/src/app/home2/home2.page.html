@@ -30,11 +30,6 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-card-content>
-
-    </ion-card-content>
-  </ion-card>
   <ion-item lines="full">
     {{'Nivel Educacional'}}
     <ion-select [(ngModel)]="campoSeleccionado">
@@ -44,13 +39,14 @@
     </ion-select>
   </ion-item>
   <ion-item lines="full">
-    <mat-form-field class="example-full-width">
+    <mat-form-field>
       <mat-label>Choose a date</mat-label>
       <input matInput [matDatepicker]="picker">
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+    
   </ion-item>
   <ion-item lines="full">
     
